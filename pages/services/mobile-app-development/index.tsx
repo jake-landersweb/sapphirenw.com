@@ -1,10 +1,10 @@
-import ServicePageWrapper from "../../components/services/servicePageWrapper"
-import ServiceSmallItem from "../../components/services/serviceSmallItem"
+import ServicePageWrapper from "../../../components/services/servicePageWrapper"
+import ServiceSmallItem from "../../../components/services/serviceSmallItem"
 import { HiOutlineChatAlt2 } from 'react-icons/hi'
 import { IoLogoWebComponent } from 'react-icons/io5'
 import { MdOutlineDesignServices } from 'react-icons/md'
-import ServiceLargeItem from "../../components/services/serviceLargeItem"
-import PricingCell from "../../components/pricingCell"
+import ServiceLargeItem from "../../../components/services/serviceLargeItem"
+import PricingCell from "../../../components/pricingCell"
 
 const MobileAppDevelopment = () => {
     return <>

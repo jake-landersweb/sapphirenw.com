@@ -30,7 +30,7 @@ const Statement = () => {
         <section className="grid place-items-center">
             <div className="max-w-screen-md mb-8 lg:mb-16 grid place-items-center">
                 <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center">What Makes Sapphire Different?</h2>
-                <p className="text-gray-500 sm:text-xl dark:text-gray-400 text-center">We believe that software should be more than just a tool. The software used to connect you and your users should be a hand-crafted experience. Our attention to your unique business needs combined with world class design and architecture deliver a higher level of satisfaction and polish not seen elsewhere.</p>
+                <p className="text-gray-500 sm:text-xl dark:text-gray-400 text-center">We believe that software should be more than just a tool. The software used to connect you and your customers should be a hand-crafted experience. Our attention to your unique business needs combined with world class design and architecture deliver a higher level of satisfaction and polish not seen elsewhere.</p>
             </div>
             <div className="space-y-8 md:grid lg:grid-cols-3 md:gap-12 md:space-y-0">
                 {statementItem("/svg/design-2.svg", "design asset", "Polished User Interfaces (UI/UX)", "", "Learn more about our design")}

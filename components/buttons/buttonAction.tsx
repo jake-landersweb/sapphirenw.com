@@ -1,15 +1,8 @@
 import Link from "next/link"
+import ButtonProps from "./buttonProps"
 import ButtonType from "./buttonType"
 
-type ButtonActionProps = {
-    title: string
-    type?: ButtonType
-    onTap?: () => void
-    href?: string
-    maxWidth?: boolean
-}
-
-const ButtonAction = ({ props }: { props: ButtonActionProps }) => {
+const ButtonAction = ({ props }: { props: ButtonProps }) => {
     const { title, type = ButtonType.button, onTap = () => { }, href = "/", maxWidth = false } = props
     const content = () => {
         return <div className={`${maxWidth ? "w-max" : "px-4"} py-2 font-medium rounded-md border border-main text-txt-dark bg-main hover:bg-main-600 dark:hover:border-main-600 transition-all w-fit`}>

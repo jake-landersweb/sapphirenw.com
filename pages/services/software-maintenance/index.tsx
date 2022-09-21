@@ -1,6 +1,6 @@
-import PricingCell from "../../components/pricingCell"
-import ServiceLargeItem from "../../components/services/serviceLargeItem"
-import ServicePageWrapper from "../../components/services/servicePageWrapper"
+import PricingCell from "../../../components/pricingCell"
+import ServiceLargeItem from "../../../components/services/serviceLargeItem"
+import ServicePageWrapper from "../../../components/services/servicePageWrapper"
 
 const SoftwareMaintenance = () => {
     return <div className="">

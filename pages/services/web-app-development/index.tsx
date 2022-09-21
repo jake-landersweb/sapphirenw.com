@@ -1,9 +1,9 @@
-import ServicePageWrapper from "../../components/services/servicePageWrapper"
-import ServiceSmallItem from "../../components/services/serviceSmallItem"
+import ServicePageWrapper from "../../../components/services/servicePageWrapper"
+import ServiceSmallItem from "../../../components/services/serviceSmallItem"
 import { FaUserTie, FaBalanceScaleLeft } from 'react-icons/fa'
 import { MdTouchApp } from 'react-icons/md'
-import ServiceLargeItem from "../../components/services/serviceLargeItem"
-import PricingCell from "../../components/pricingCell"
+import ServiceLargeItem from "../../../components/services/serviceLargeItem"
+import PricingCell from "../../../components/pricingCell"
 
 const WebAppDevelopment = () => {
     return <div className="">

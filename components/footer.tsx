@@ -1,9 +1,37 @@
+import { useTheme } from "next-themes"
+import { FiMoon, FiSun } from "react-icons/fi"
+import Image from "./image"
 import Link from "./link"
 
 const Footer = () => {
+    const { theme, setTheme } = useTheme()
+
+    const toggleTheme = () => {
+        setTheme(theme == "light" ? "dark" : "light")
+    }
+
     return <>
 
         <footer className="bg-bg-200 dark:bg-bg-dark-500">
+            <div className="flex py-8 px-6 justify-between max-w-[1300px] mx-auto">
+                <div className="flex items-center">
+                    <Image props={{
+                        src: '/svg/sapphire.svg',
+                        alt: 'sapphire nw logo',
+                        divClass: "h-[40px] w-[40px]",
+                        imgClass: "h-[40px] w-[40px] pr-2"
+                    }} />
+                    <h1 className='font-bold tracking-tight text-2xl'>Sapphire</h1>
+                </div>
+                <button onClick={() => toggleTheme()} className="p-2 bg-bg-200 border border-bg-400 dark:border-bg-dark-600 dark:bg-bg-dark-600 rounded-md hover:opacity-50 transition-opacity">
+                    <div className="dark:hidden">
+                        <FiMoon size={20} className="text-main" />
+                    </div>
+                    <div className="hidden dark:block">
+                        <FiSun size={20} className="text-acc" />
+                    </div>
+                </button>
+            </div>
             <div className="grid grid-cols-1 gap-8 py-8 px-6 md:grid-cols-4">
                 <div className="text-center">
                     <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Company</h2>
@@ -42,7 +70,7 @@ const Footer = () => {
                     <ul className="text-gray-500 dark:text-gray-400">
                         <li className="mb-4">
                             <Link props={{
-                                href: "/mobile-app-development",
+                                href: "/services/mobile-app-development",
                                 child: <>Mobile App Development</>,
                                 isExternal: false,
                                 className: "hover:underline"
@@ -50,7 +78,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                             <Link props={{
-                                href: "/web-app-development",
+                                href: "/services/web-app-development",
                                 child: <>Web App Development</>,
                                 isExternal: false,
                                 className: "hover:underline"
@@ -58,7 +86,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                             <Link props={{
-                                href: "/software-maintenance",
+                                href: "/services/software-maintenance",
                                 child: <>Software Maintenance</>,
                                 isExternal: false,
                                 className: "hover:underline"
@@ -95,7 +123,7 @@ const Footer = () => {
                     <ul className="text-gray-500 dark:text-gray-400">
                         <li className="mb-4">
                             <Link props={{
-                                href: "/learning-management",
+                                href: "/solutions/learning-management",
                                 child: <>Learning Management Software</>,
                                 isExternal: false,
                                 className: "hover:underline"
@@ -103,28 +131,28 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                             <Link props={{
-                                href: "/event-management",
-                                child: <>Event Management Systems</>,
+                                href: "/solutions/sports-management",
+                                child: <>Sports Management Systems</>,
                                 isExternal: false,
                                 className: "hover:underline"
                             }} />
                         </li>
                         <li className="mb-4">
                             <Link props={{
-                                href: "/messaging-systems",
+                                href: "/solutions/messaging-systems",
                                 child: <>Enterprise Messaging Systems</>,
                                 isExternal: false,
                                 className: "hover:underline"
                             }} />
                         </li>
-                        <li className="mb-4">
+                        {/* <li className="mb-4">
                             <Link props={{
-                                href: "/custom-software-experiences",
+                                href: "/solutions/custom-software-experiences",
                                 child: <>Customized Software Experiences</>,
                                 isExternal: false,
                                 className: "hover:underline"
                             }} />
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="text-center">
@@ -138,9 +166,6 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                             <a href="#" className="hover:underline">Windows</a>
-                        </li>
-                        <li className="mb-4">
-                            <a href="#" className="hover:underline">MacOS</a>
                         </li>
                     </ul>
                 </div>

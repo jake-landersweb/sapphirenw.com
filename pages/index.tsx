@@ -16,20 +16,6 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 
-  const properties: React.CSSProperties = {
-    // position: "absolute",
-    top: "0",
-    bottom: "0",
-    right: "0",
-    left: "0",
-    width: "100%",
-    height: "200px",
-    background: "#2c3e50",
-    zIndex: "0",
-    transform: "skewY(8deg)",
-    // transformOrigin: "top right",
-  }
-
   return (
     <div className="space-y-16 md:space-y-32 grid place-items-center">
       <BoundsWrapper><Landing /></BoundsWrapper>
