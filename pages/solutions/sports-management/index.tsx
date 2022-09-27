@@ -1,5 +1,6 @@
 import AssetCell from "../../../components/assetCell"
 import XCShowcase from "../../../components/crosscheck/xcShowcase"
+import Form from "../../../components/form/form"
 import Image from "../../../components/image"
 import Link from "../../../components/link"
 import PricingCell from "../../../components/pricingCell"
@@ -9,7 +10,7 @@ import SolutionsPageWrapper from "../../../components/solutions/solutionsPageWra
 const EventManagement = () => {
     return <SolutionsPageWrapper title="Sports Management Software" desc="Sapphire developed the powerful Crosscheck Sports engine. Power your own personal sports team for a fraction of the price." src="/svg/events.svg" alt="Event Schedule Builder" moreTag="#why">
         <div className="space-y-16 nd:space-y-32">
-            <SolutionsItem description={"Learn how Sapphire can make a custom sports app experience for you."} id={"why"} hasHeight={false}>
+            <SolutionsItem description={"Learn How Sapphire Can Make a Custom Sports App Experience For You."} id={"why"} hasHeight={false}>
                 <div className="space-y-2">
                     <div className="grid place-items-center">
                         <Image props={{
@@ -35,7 +36,7 @@ const EventManagement = () => {
                 </div>
             </SolutionsItem>
             <div className="">
-                <SolutionsItem description={"Explore the main features that Crosscheck Sports has to offer."} id={""} hasHeight={false}>
+                <SolutionsItem description={"Explore The Main Features That Crosscheck Sports Has To Offer."} id={""} hasHeight={false}>
                     <XCShowcase />
                 </SolutionsItem>
             </div>
@@ -45,7 +46,7 @@ const EventManagement = () => {
                     <PricingCell props={{
                         title: "Estimate",
                         price: "Free",
-                        description: "Talk with an engineer about your LMS needs.",
+                        description: "Talk with an engineer about your sports team.",
                         points: ["No commitment", "No upselling", "Convenient scheduling", "Guided conversation"],
                         isMonthly: false
                     }} />
@@ -66,6 +67,12 @@ const EventManagement = () => {
                     }} />
                 </div>
             </div>
+            <Form props={{
+                nameLabel: undefined,
+                emailLabel: undefined,
+                bodyLabel: "Talk with us about sports management systems",
+                tag: "Sports management systems"
+            }} />
         </div>
     </SolutionsPageWrapper>
 }

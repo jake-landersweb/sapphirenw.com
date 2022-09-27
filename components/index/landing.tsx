@@ -1,5 +1,6 @@
 import ButtonAction from "../buttons/buttonAction"
 import ButtonSub from "../buttons/buttonSub"
+import ButtonType from "../buttons/buttonType"
 import Image from "../image"
 
 const Landing = () => {
@@ -13,11 +14,13 @@ const Landing = () => {
                         <div className="flex space-x-2">
                             <ButtonAction props={{
                                 title: 'Contact Us',
-                                onTap: () => { },
+                                type: ButtonType.internalLink,
+                                href: "/contact"
                             }} />
                             <ButtonSub props={{
                                 title: 'Schedule a Chat',
-                                onTap: () => { },
+                                type: ButtonType.internalLink,
+                                href: "/contact"
                             }} />
                         </div>
                     </div>

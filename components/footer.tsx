@@ -23,7 +23,7 @@ const Footer = () => {
                     }} />
                     <h1 className='font-bold tracking-tight text-2xl'>Sapphire</h1>
                 </div>
-                <button onClick={() => toggleTheme()} className="p-2 bg-bg-200 border border-bg-400 dark:border-bg-dark-600 dark:bg-bg-dark-600 rounded-md hover:opacity-50 transition-opacity">
+                <button onClick={() => toggleTheme()} className="p-2 bg-bg-200 border border-bg-400 dark:border-bg-dark-600 dark:bg-bg-dark-600 rounded-md md:hover:opacity-50 transition-opacity">
                     <div className="dark:hidden">
                         <FiMoon size={20} className="text-main" />
                     </div>
@@ -37,7 +37,14 @@ const Footer = () => {
                     <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Company</h2>
                     <ul className="text-gray-500 dark:text-gray-400">
                         <li className="mb-4">
-                            <a href="#" className=" hover:underline">About</a>
+                            <li className="mb-4">
+                                <Link props={{
+                                    href: "/about",
+                                    child: <>About</>,
+                                    isExternal: false,
+                                    className: "hover:underline"
+                                }} />
+                            </li>
                         </li>
                         <li className="mb-4">
                             <Link props={{
@@ -159,14 +166,29 @@ const Footer = () => {
                     <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Design</h2>
                     <ul className="text-gray-500 dark:text-gray-400">
                         <li className="mb-4">
-                            <a href="#" className="hover:underline">iOS</a>
+                            <Link props={{
+                                href: "/design/user-experience",
+                                child: <>User Experience</>,
+                                isExternal: false,
+                                className: "hover:underline"
+                            }} />
                         </li>
                         <li className="mb-4">
-                            <a href="#" className="hover:underline">Android</a>
+                            <Link props={{
+                                href: "/design/architecture",
+                                child: <>Native Architecture</>,
+                                isExternal: false,
+                                className: "hover:underline"
+                            }} />
                         </li>
-                        <li className="mb-4">
-                            <a href="#" className="hover:underline">Windows</a>
-                        </li>
+                        {/* <li className="mb-4">
+                            <Link props={{
+                                href: "/design/native-experiences",
+                                child: <>Native Experiences</>,
+                                isExternal: false,
+                                className: "hover:underline"
+                            }} />
+                        </li> */}
                     </ul>
                 </div>
             </div>

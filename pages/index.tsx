@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import BoundsWrapper from '../components/boundsWrapper'
 import ButtonAction from '../components/buttons/buttonAction'
 import ButtonSub from '../components/buttons/buttonSub'
+import Form from '../components/form/form'
 import Image from '../components/image'
 import Design from '../components/index/design'
 import Landing from '../components/index/landing'
@@ -24,6 +25,12 @@ const Home: NextPage = () => {
       <Solutions />
       <BoundsWrapper><Design /></BoundsWrapper>
       <BoundsWrapper><SapphireWay /></BoundsWrapper>
+      <BoundsWrapper><Form props={{
+        nameLabel: undefined,
+        emailLabel: undefined,
+        bodyLabel: undefined,
+        tag: "from index page"
+      }} /></BoundsWrapper>
     </div>
   )
 }

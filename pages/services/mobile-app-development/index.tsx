@@ -5,6 +5,7 @@ import { IoLogoWebComponent } from 'react-icons/io5'
 import { MdOutlineDesignServices } from 'react-icons/md'
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
 import PricingCell from "../../../components/pricingCell"
+import Form from "../../../components/form/form"
 
 const MobileAppDevelopment = () => {
     return <>
@@ -89,6 +90,12 @@ const MobileAppDevelopment = () => {
                             }} />
                         </div>
                     </div>
+                    <Form props={{
+                        nameLabel: undefined,
+                        emailLabel: undefined,
+                        bodyLabel: "Talk with us about our mobile app development",
+                        tag: "Mobile app development"
+                    }} />
                 </div>
             </>
         }} />

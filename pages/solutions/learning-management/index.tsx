@@ -8,6 +8,7 @@ import ExamQuestion from "../../../components/examQuestion"
 import Image from "../../../components/image"
 import SolutionsItem2 from "../../../components/solutions/solutionsItem2"
 import PricingCell from "../../../components/pricingCell"
+import Form from "../../../components/form/form"
 
 const LearningManagement = () => {
 
@@ -40,7 +41,7 @@ const LearningManagement = () => {
 
     return <SolutionsPageWrapper title="Learning Management Software" desc="Elevate your online learning with the powerful LMS from Sapphire, purpose built for companies like yours." src="/svg/learning-management.svg" alt="Learning management books" moreTag="#why">
         <div id="why" className="space-y-16 md:space-y-32">
-            <SolutionsItem id="#why" description="2020 pushed the world fully online, now you can learn there too.">
+            <SolutionsItem id="#why" description="2020 Pushed The World Fully Online, Now You Can Learn There Too.">
                 <div className="space-y-16 grid place-items-center">
                     <div className="grid place-items-center grid-cols-1 md:grid-cols-3 md:max-h-[500px] gap-4 md:gap-0">
                         {LearningItem(0, "Physical Learning", "/svg/school.svg", "Physical school")}
@@ -95,6 +96,12 @@ const LearningManagement = () => {
                     }} />
                 </div>
             </div>
+            <Form props={{
+                nameLabel: undefined,
+                emailLabel: undefined,
+                bodyLabel: "Talk with us about learning management systems",
+                tag: "Learning management systems"
+            }} />
         </div>
     </SolutionsPageWrapper>
 }

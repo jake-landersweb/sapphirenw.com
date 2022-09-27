@@ -1,3 +1,4 @@
+import Form from "../../../components/form/form"
 import PricingCell from "../../../components/pricingCell"
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
 import ServicePageWrapper from "../../../components/services/servicePageWrapper"
@@ -58,6 +59,12 @@ const SoftwareMaintenance = () => {
                             }} />
                         </div>
                     </div>
+                    <Form props={{
+                        nameLabel: undefined,
+                        emailLabel: undefined,
+                        bodyLabel: "Talk with us about our software maintenance",
+                        tag: "software maintenance"
+                    }} />
                 </div>
             </>
         }} />

@@ -7,6 +7,7 @@ import ButtonHeader from '../buttons/buttonHeader';
 import HoverMenu from '../hoverMenu/hoverMenu';
 import HoverMenuType from '../hoverMenu/hoverMenuType';
 import HoverMenuItem from '../hoverMenu/hoverMenuItem';
+import ButtonType from '../buttons/buttonType';
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -106,15 +107,15 @@ const Header = () => {
                         isExternal: false,
                     }} />
                     <HoverMenuItem props={{
-                        title: 'Crafted Architecture',
+                        title: 'Native Architecture',
                         href: '/design/architecture',
                         isExternal: false,
                     }} />
-                    <HoverMenuItem props={{
+                    {/* <HoverMenuItem props={{
                         title: 'Native Experiences',
                         href: '/design/native-experiences',
                         isExternal: false,
-                    }} />
+                    }} /> */}
                     {/* <HoverMenuItem props={{
                         title: 'Customized Software Experiences',
                         href: '/solutions/custom-software-experiences',
@@ -124,7 +125,8 @@ const Header = () => {
             }} />
             <ButtonAction props={{
                 title: 'Contact Us',
-                onTap: () => { }
+                type: ButtonType.internalLink,
+                href: "/contact",
             }} />
         </div>
     }
@@ -248,8 +250,8 @@ const Header = () => {
                     <h3 className='text-2xl font-bold'>Design</h3>
                     <div>
                         <HeaderItem props={{
-                            route: '/solutions/custom-software-experiences',
-                            title: 'Custom Software Experiences',
+                            route: '/design/user-experience',
+                            title: 'User Experience',
                             onTap: () => closeMenu(),
                             isCollapsed: false,
                             className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",
@@ -258,15 +260,15 @@ const Header = () => {
                     </div>
                     <div>
                         <HeaderItem props={{
-                            route: '/learning-management',
-                            title: 'Learning Management Systems',
+                            route: '/design/architecture',
+                            title: 'Native Architecture',
                             onTap: () => closeMenu(),
                             isCollapsed: false,
                             className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",
                             isExternal: false,
                         }} />
                     </div>
-                    <div>
+                    {/* <div>
                         <HeaderItem props={{
                             route: '/sports-management',
                             title: 'Event Management Systems',
@@ -275,7 +277,7 @@ const Header = () => {
                             className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",
                             isExternal: false,
                         }} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

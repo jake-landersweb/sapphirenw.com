@@ -4,6 +4,7 @@ import { FaUserTie, FaBalanceScaleLeft } from 'react-icons/fa'
 import { MdTouchApp } from 'react-icons/md'
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
 import PricingCell from "../../../components/pricingCell"
+import Form from "../../../components/form/form"
 
 const WebAppDevelopment = () => {
     return <div className="">
@@ -89,6 +90,12 @@ const WebAppDevelopment = () => {
                             }} />
                         </div>
                     </div>
+                    <Form props={{
+                        nameLabel: undefined,
+                        emailLabel: undefined,
+                        bodyLabel: "Talk with us about our web app development",
+                        tag: "web app development"
+                    }} />
                 </div>
             </>
         }} />
