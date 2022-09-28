@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Form from "../../../components/form/form"
 import PricingCell from "../../../components/pricingCell"
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
@@ -5,6 +6,10 @@ import ServicePageWrapper from "../../../components/services/servicePageWrapper"
 
 const SoftwareMaintenance = () => {
     return <div className="">
+        <Head>
+            <title key="title">Sapphire - Software Maintenance</title>
+            <meta name="keywords" id="keywords" content="Portland Software Maintenance,Portland Software Fixes,Experienced Developers,Portland Software Support Team,Website Support,Mobile App Support" />
+        </Head>
         <ServicePageWrapper props={{
             title: "Software Maintenance",
             svgPath: "/svg/maintenance.svg",

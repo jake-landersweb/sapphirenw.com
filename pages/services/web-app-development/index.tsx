@@ -5,9 +5,14 @@ import { MdTouchApp } from 'react-icons/md'
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
 import PricingCell from "../../../components/pricingCell"
 import Form from "../../../components/form/form"
+import Head from "next/head"
 
 const WebAppDevelopment = () => {
     return <div className="">
+        <Head>
+            <title key="title">Sapphire - Web App Development</title>
+            <meta name="keywords" id="keywords" content="Portland Web App Development,Portland Responsive Websites,Web App Experiences,Portland Website Applications,Portland Web Infrastructure" />
+        </Head>
         <ServicePageWrapper props={{
             title: "Web App Development",
             svgPath: "/svg/web-app-development.svg",

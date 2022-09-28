@@ -9,6 +9,7 @@ import Image from "../../../components/image"
 import SolutionsItem2 from "../../../components/solutions/solutionsItem2"
 import PricingCell from "../../../components/pricingCell"
 import Form from "../../../components/form/form"
+import Head from "next/head"
 
 const LearningManagement = () => {
 
@@ -39,71 +40,77 @@ const LearningManagement = () => {
         }
     }
 
-    return <SolutionsPageWrapper title="Learning Management Software" desc="Elevate your online learning with the powerful LMS from Sapphire, purpose built for companies like yours." src="/svg/learning-management.svg" alt="Learning management books" moreTag="#why">
-        <div id="why" className="space-y-16 md:space-y-32">
-            <SolutionsItem id="#why" description="2020 Pushed The World Fully Online, Now You Can Learn There Too.">
-                <div className="space-y-16 grid place-items-center">
-                    <div className="grid place-items-center grid-cols-1 md:grid-cols-3 md:max-h-[500px] gap-4 md:gap-0">
-                        {LearningItem(0, "Physical Learning", "/svg/school.svg", "Physical school")}
-                        {LearningItem(1, "Hybrid Learning", "/svg/online-learning.svg", "Online learning")}
-                        {LearningItem(2, "Cloud Learning", "/svg/cloud-hosting.svg", "Cloud Hosting")}
+    return <>
+        <Head>
+            <title key="title">Sapphire - Learning Management</title>
+            <meta name="keywords" id="keywords" content="Portland Learning Management,Portland Online Class Builder,Online Class Tools,Portland LMS,Premier Learning Management,Solid LMS Platform,Beautiful Learning Management System" />
+        </Head>
+        <SolutionsPageWrapper title="Learning Management Software" desc="Elevate your online learning with the powerful LMS from Sapphire, purpose built for companies like yours." src="/svg/learning-management.svg" alt="Learning management books" moreTag="#why">
+            <div id="why" className="space-y-16 md:space-y-32">
+                <SolutionsItem id="#why" description="2020 Pushed The World Fully Online, Now You Can Learn There Too.">
+                    <div className="space-y-16 grid place-items-center">
+                        <div className="grid place-items-center grid-cols-1 md:grid-cols-3 md:max-h-[500px] gap-4 md:gap-0">
+                            {LearningItem(0, "Physical Learning", "/svg/school.svg", "Physical school")}
+                            {LearningItem(1, "Hybrid Learning", "/svg/online-learning.svg", "Online learning")}
+                            {LearningItem(2, "Cloud Learning", "/svg/cloud-hosting.svg", "Cloud Hosting")}
+                        </div>
+                        <p className="hidden md:block subtext max-w-4xl text-center">{getLearningText(learningIndex)}</p>
                     </div>
-                    <p className="hidden md:block subtext max-w-4xl text-center">{getLearningText(learningIndex)}</p>
-                </div>
-            </SolutionsItem>
-            <SolutionsItem2 id="#" title="15 Years of LMS Technology." desc="From multiple choice, free response, to select all that apply, use the Sapphire LMS engine to custom compose your exams and courses.">
-                <div className="space-y-2">
-                    <ExamQuestion props={{
-                        question: "What is the distance between New York and San Francisco?",
-                        choices: ["3002 miles", "3214 miles", "2901 miles", "2955 miles"],
-                        correctIndex: 2
+                </SolutionsItem>
+                <SolutionsItem2 id="#" title="15 Years of LMS Technology." desc="From multiple choice, free response, to select all that apply, use the Sapphire LMS engine to custom compose your exams and courses.">
+                    <div className="space-y-2">
+                        <ExamQuestion props={{
+                            question: "What is the distance between New York and San Francisco?",
+                            choices: ["3002 miles", "3214 miles", "2901 miles", "2955 miles"],
+                            correctIndex: 2
+                        }} />
+                    </div>
+                </SolutionsItem2>
+                <SolutionsItem2 id="#" title="Creating Your Course Has Never Been Easier." desc="We don’t provide just exams, we offer an intuitive course building tool which integrates into any project, whether it is mobile apps, websites, and more." reverse={true}>
+                    <Image props={{
+                        src: "/svg/factory.svg",
+                        alt: "Factory Builder",
+                        divClass: "",
+                        imgClass: undefined
                     }} />
+                </SolutionsItem2>
+                <div id="pricing" className="pt-16">
+                    <h3 className="grid place-items-center subtitle pb-16">Products</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <PricingCell props={{
+                            title: "Estimate",
+                            price: "Free",
+                            description: "Talk with an engineer about your LMS needs.",
+                            points: ["No commitment", "No upselling", "Convenient scheduling", "Guided conversation"],
+                            isMonthly: false
+                        }} />
+                        <PricingCell props={{
+                            title: "Course Builder",
+                            price: "$2000",
+                            description: "Sapphire created custom LMS courser builder.",
+                            points: ["Web hosting", "Intuitive interface", "Data interopable", "First-class support"],
+                            isMonthly: false,
+                            isFrom: true,
+                        }} />
+                        <PricingCell props={{
+                            title: "Enterprise Solution",
+                            price: "$6000+",
+                            description: "Talk with us about a custom built solution.",
+                            points: ["Multiplatform", "Student management", "Complete customization", "First-class support"],
+                            isMonthly: false,
+                            isFrom: true,
+                        }} />
+                    </div>
                 </div>
-            </SolutionsItem2>
-            <SolutionsItem2 id="#" title="Creating Your Course Has Never Been Easier." desc="We don’t provide just exams, we offer an intuitive course building tool which integrates into any project, whether it is mobile apps, websites, and more." reverse={true}>
-                <Image props={{
-                    src: "/svg/factory.svg",
-                    alt: "Factory Builder",
-                    divClass: "",
-                    imgClass: undefined
+                <Form props={{
+                    nameLabel: undefined,
+                    emailLabel: undefined,
+                    bodyLabel: "Talk with us about learning management systems",
+                    tag: "Learning management systems"
                 }} />
-            </SolutionsItem2>
-            <div id="pricing" className="pt-16">
-                <h3 className="grid place-items-center subtitle pb-16">Products</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <PricingCell props={{
-                        title: "Estimate",
-                        price: "Free",
-                        description: "Talk with an engineer about your LMS needs.",
-                        points: ["No commitment", "No upselling", "Convenient scheduling", "Guided conversation"],
-                        isMonthly: false
-                    }} />
-                    <PricingCell props={{
-                        title: "Course Builder",
-                        price: "$2000",
-                        description: "Sapphire created custom LMS courser builder.",
-                        points: ["Web hosting", "Intuitive interface", "Data interopable", "First-class support"],
-                        isMonthly: false,
-                        isFrom: true,
-                    }} />
-                    <PricingCell props={{
-                        title: "Enterprise Solution",
-                        price: "$6000+",
-                        description: "Talk with us about a custom built solution.",
-                        points: ["Multiplatform", "Student management", "Complete customization", "First-class support"],
-                        isMonthly: false,
-                        isFrom: true,
-                    }} />
-                </div>
             </div>
-            <Form props={{
-                nameLabel: undefined,
-                emailLabel: undefined,
-                bodyLabel: "Talk with us about learning management systems",
-                tag: "Learning management systems"
-            }} />
-        </div>
-    </SolutionsPageWrapper>
+        </SolutionsPageWrapper>
+    </>
 }
 
 export default LearningManagement

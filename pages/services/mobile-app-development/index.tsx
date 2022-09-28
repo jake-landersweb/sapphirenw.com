@@ -6,9 +6,14 @@ import { MdOutlineDesignServices } from 'react-icons/md'
 import ServiceLargeItem from "../../../components/services/serviceLargeItem"
 import PricingCell from "../../../components/pricingCell"
 import Form from "../../../components/form/form"
+import Head from "next/head"
 
 const MobileAppDevelopment = () => {
     return <>
+        <Head>
+            <title key="title">Sapphire - Mobile App Development</title>
+            <meta name="keywords" id="keywords" content="Portland Mobile Apps,PNW Mobile App Development,Portland Flutter Developers,Portland iOS Development,Portland Android Development,Portland Mobile Design" />
+        </Head>
         <ServicePageWrapper props={{
             title: "Mobile App Development",
             svgPath: "/svg/mobile-dev.svg",
