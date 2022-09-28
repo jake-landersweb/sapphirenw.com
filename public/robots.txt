@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sapphirenw.com
+
+# Sitemaps
+Sitemap: https://sapphirenw.com/sitemap.xml
