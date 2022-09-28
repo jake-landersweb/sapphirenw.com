@@ -1,5 +1,3 @@
-import { RiAppleFill } from 'react-icons/ri'
-import { FcGoogle } from 'react-icons/fc'
 import { FaGlobeAmericas } from 'react-icons/fa'
 
 type CustomAppButtonsProps = {

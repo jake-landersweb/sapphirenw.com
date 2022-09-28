@@ -29,16 +29,6 @@ const Form = ({ props }: { props: FormProps }) => {
         }
     }
 
-    const emailErrorText = () => {
-        if (email == "") {
-            return "Cannot be empty"
-        } else if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$/.test(email)) {
-            return ""
-        } else {
-            return "Please enter a valid email"
-        }
-    }
-
     const formValid = () => {
         if (name == "") {
             return false
@@ -48,6 +38,20 @@ const Form = ({ props }: { props: FormProps }) => {
             return false
         } else {
             return true
+        }
+    }
+
+    const validationText = () => {
+        if (name == "" && email == "" && body == "") {
+            return ""
+        } else if (name == "") {
+            return "Name cannot be empty."
+        } else if (!emailIsValid()) {
+            return "Please enter a valid email."
+        } else if (body == "") {
+            return "Body cannot be empty."
+        } else {
+            return "Your information looks good!"
         }
     }
 
@@ -98,16 +102,16 @@ const Form = ({ props }: { props: FormProps }) => {
                     errorText: "Cannot be empty",
                     inputType: "text",
                     onChanged: (val) => setName(val),
-                    isValid: name != "",
+                    isValid: true,
                 }} />
                 <Field props={{
                     value: email,
                     label: "Email",
                     placeholder: emailLabel,
-                    errorText: emailErrorText(),
+                    errorText: "",
                     inputType: "text",
                     onChanged: (val) => setEmail(val),
-                    isValid: emailIsValid(),
+                    isValid: true,
                 }} />
                 <Field props={{
                     value: body,
@@ -116,15 +120,16 @@ const Form = ({ props }: { props: FormProps }) => {
                     errorText: "Cannot be empty",
                     inputType: "text",
                     onChanged: (val) => setBody(val),
-                    isValid: body != "",
+                    isValid: true,
                     isTextArea: true,
                     rows: 1,
                     height: "h-[200px]"
                 }} />
                 <div className="grid place-items-center">
-                    <button onClick={() => sendEmail()} className={`${formValid() ? "bg-main" : "bg-red-300"} text-white h-[50px] w-[150px] px-4 py-2 rounded-md hover:opacity-50 transition-opacity`}>
+                    <p className={`${showError ? "dark:text-red-300 text-red-500" : showSuccess ? "dark:text-green-400 text-green-600" : "text-gray-500"} h-[30px]`}>{showError ? "There was an issue" : showSuccess ? "Successfully sent your message." : validationText()}</p>
+                    <button onClick={() => sendEmail()} className={`${formValid() ? "bg-main hover:opacity-50" : "text-txt-200 bg-main-300 hover:cursor-default"} text-white h-[50px] w-[150px] px-4 py-2 rounded-md transition-all`}>
                         <p className={`${isLoading ? "hidden" : ""}`}>
-                            {formValid() ? <>Get more info</> : <>Fill out form</>}
+                            Contact Us
                         </p>
                         <p className={`${isLoading ? "" : "hidden"} grid place-items-center`}>
                             <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -133,8 +138,6 @@ const Form = ({ props }: { props: FormProps }) => {
                             </svg>
                         </p>
                     </button>
-                    <p className={`${showError ? "h-[20px] opacity-100" : "h-0 opacity-0"} transition-all text-red-300`}>There was an issue</p>
-                    <p className={`${showSuccess ? "h-[20px] opacity-100" : "h-0 opacity-0"} transition-all text-txt-700`}>Successfully sent message</p>
                 </div>
             </div>
         </div>
