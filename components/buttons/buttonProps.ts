@@ -6,6 +6,7 @@ type ButtonProps = {
     onTap?: () => void
     href?: string
     maxWidth?: boolean
+    className?: string
 }
 
 export default ButtonProps

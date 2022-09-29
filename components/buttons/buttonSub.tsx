@@ -3,9 +3,9 @@ import ButtonProps from "./buttonProps"
 import ButtonType from "./buttonType"
 
 const ButtonSub = ({ props }: { props: ButtonProps }) => {
-    const { title, type = ButtonType.button, onTap = () => { }, href = "/", maxWidth = false } = props
+    const { title, type = ButtonType.button, onTap = () => { }, href = "/", maxWidth = false, className = "" } = props
     const content = () => {
-        return <div className={`${maxWidth ? "w-max" : "px-4"} py-2 font-medium rounded-md border border-bg-400 hover:bg-bg-200 transition-all dark:border-bg-dark-400 dark:hover:bg-bg-dark-400`}>
+        return <div className={`${maxWidth ? "w-max" : "px-4"} py-2 font-medium rounded-md border border-bg-400 hover:bg-bg-200 transition-all dark:border-bg-dark-400 dark:hover:bg-bg-dark-400 ${className}`}>
             <h3>{title}</h3>
         </div>
     }

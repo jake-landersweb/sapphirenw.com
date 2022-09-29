@@ -19,8 +19,8 @@ const Landing = () => {
                             }} />
                             <ButtonSub props={{
                                 title: 'Schedule a Chat',
-                                type: ButtonType.internalLink,
-                                href: "/contact"
+                                type: ButtonType.externalLink,
+                                href: "https://calendly.com/jake-sapphirenw/30min"
                             }} />
                         </div>
                     </div>
