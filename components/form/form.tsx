@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ButtonSub from "../buttons/buttonSub"
 import ButtonType from "../buttons/buttonType"
+import Image from "../image"
 import Field from "./field"
 
 type FormProps = {
@@ -92,10 +93,12 @@ const Form = ({ props }: { props: FormProps }) => {
         }
     }
 
-    return <>
-
+    return <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 items-center">
         <div className="space-y-8">
-            <h3 className="grid place-items-center subtitle">Contact Us</h3>
+            <div className="sapce-y-2 text-center md:text-left">
+                <h3 className="grid place-items-center subtitle">Ready To Enhance Your Online Presence?</h3>
+                <p className="text-gray-500 dark:text-gray-400 mb-2 max-w-2xl">Tell us about your needs as a business and a human will get back to you with a meaningful response. Or, schedule a meeting with a Sapphire engineer.</p>
+            </div>
             <div className="space-y-4">
                 <Field props={{
                     value: name,
@@ -151,7 +154,13 @@ const Form = ({ props }: { props: FormProps }) => {
                 </div>
             </div>
         </div>
-    </>
+        <Image props={{
+            src: "/svg/phone-call.svg",
+            alt: "Phone Call",
+            divClass: "hidden md:block max-w-[500px]",
+            imgClass: "min-w-[300px]"
+        }} />
+    </div>
 }
 
 export default Form

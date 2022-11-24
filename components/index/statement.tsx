@@ -33,9 +33,9 @@ const Statement = () => {
                 <p className="text-gray-500 sm:text-xl dark:text-gray-400 text-center">We believe that software should be more than just a tool. The software used to connect you and your customers should be a hand-crafted experience. Our attention to your unique business needs combined with world class design and architecture deliver a higher level of satisfaction and polish not seen elsewhere.</p>
             </div>
             <div className="space-y-8 md:grid lg:grid-cols-3 md:gap-12 md:space-y-0">
-                {statementItem("/svg/design-2.svg", "design asset", "Polished User Interfaces (UI/UX)", "", "Learn more about our design")}
-                {statementItem("/svg/technology.svg", "future technology", "Bleeding Edge Technologies", "", "Learn more about technology")}
-                {statementItem("/svg/professional.svg", "professional experience", "20+ Years Professional Experience", "", "Learn more about us")}
+                {statementItem("/svg/design-2.svg", "design asset", "Polished User Interfaces (UI/UX)", "/design/user-experience", "Learn more about our design")}
+                {statementItem("/svg/technology.svg", "future technology", "Bleeding Edge Technologies", "/design/architecture", "Learn more about technology")}
+                {statementItem("/svg/professional.svg", "professional experience", "20+ Years Professional Experience", "/about", "Learn more about us")}
             </div>
         </section>
     </>

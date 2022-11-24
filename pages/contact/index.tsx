@@ -3,7 +3,7 @@ import BoundsWrapper from "../../components/boundsWrapper"
 import Form from "../../components/form/form"
 
 const Contact = () => {
-    return <>
+    return <div className="pt-20">
         <Head>
             <title key="title">Sapphire - Contact</title>
             <meta name="keywords" id="keywords" content="Contact Us,Portland Contact Developers,Message Pacific Northwest Software" />
@@ -18,7 +18,7 @@ const Contact = () => {
                 }} />
             </BoundsWrapper>
         </div>
-    </>
+    </div>
 }
 
 export default Contact
