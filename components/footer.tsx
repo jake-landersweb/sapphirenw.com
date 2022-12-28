@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes"
+import { BsLinkedin } from "react-icons/bs"
 import { FiMoon, FiSun } from "react-icons/fi"
 import Image from "./image"
 import Link from "./link"
@@ -151,8 +152,15 @@ const Footer = () => {
                 </div>
             </div>
             <div className="py-6 px-4 bg-bg-dark-500 dark:bg-bg-dark-600 md:flex md:items-center md:justify-between">
-                <span className="text-sm text-gray-300 sm:text-center">© 2022 Sapphirenw™. All Rights Reserved.
+                <span className="text-sm text-gray-300 sm:text-center">
+                    © 2022 Sapphirenw™. All Rights Reserved.
                 </span>
+                <Link props={{
+                    href: "https://www.linkedin.com/company/sapphire-nw/",
+                    child: <BsLinkedin size={30} className="text-gray-600 hover:text-gray-500 transition-colors" />,
+                    isExternal: true,
+                    className: ""
+                }} />
             </div>
         </footer>
 

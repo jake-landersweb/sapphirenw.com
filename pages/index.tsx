@@ -13,6 +13,7 @@ import Services from '../components/index/services'
 import Solutions from '../components/index/solutions'
 import Statement from '../components/index/statement'
 import SapphireWay from '../components/sapphireWay'
+import Testimonials from '../components/testimonials'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -23,12 +24,13 @@ const Home: NextPage = () => {
         <title key="title">Sapphire - PWN Software Company</title>
         <meta name="keywords" id="keywords" content="Pacific Northwest Development,Portland Software Development,Oregon Software Development,Local Web Development,Mobile App Development,Portland Mobile App Development,Pretty Software,Ellegant UI,Luxury Software Development" />
       </Head>
-      <div className="space-y-16 md:space-y-32 grid place-items-center">
+      <div className="space-y-16 md:space-y-32 flex flex-col items-center">
         <BoundsWrapper><Landing /></BoundsWrapper>
         <BoundsWrapper><Statement /></BoundsWrapper>
         <BoundsWrapper><Services /></BoundsWrapper>
         <Solutions />
         <BoundsWrapper><Design /></BoundsWrapper>
+        <BoundsWrapper><Testimonials /></BoundsWrapper>
         <BoundsWrapper><SapphireWay /></BoundsWrapper>
         <BoundsWrapper><Form props={{
           nameLabel: undefined,
