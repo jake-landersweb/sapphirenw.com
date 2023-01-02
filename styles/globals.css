@@ -12,4 +12,12 @@
     .subtitle {
         @apply text-4xl tracking-tight font-extrabold;
     }
+    .josetitle {
+        @apply font-jose tracking-widest
+    }
+}
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../public/fonts/JosefinSans-Bold.ttf");
 }

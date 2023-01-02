@@ -7,6 +7,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        jose: ["JosefinSans", "sans-serif"],
+      },
       colors: {
         acc: {
           DEFAULT: "#ff6584"

@@ -90,11 +90,16 @@ const Header = () => {
                         href: '/solutions/messaging-systems',
                         isExternal: false,
                     }} />
-                    {/* <HoverMenuItem props={{
-                        title: 'Customized Software Experiences',
-                        href: '/solutions/custom-software-experiences',
+                    <HoverMenuItem props={{
+                        title: 'It Services',
+                        href: '/solutions/it-services',
                         isExternal: false,
-                    }} /> */}
+                    }} />
+                    <HoverMenuItem props={{
+                        title: 'AI Machine Learning',
+                        href: '/solutions/ai-machine-learning',
+                        isExternal: false,
+                    }} />
                 </div>
             }} />
             <HoverMenu props={{
@@ -141,7 +146,7 @@ const Header = () => {
                             <a onClick={(e) => closeMenu()}>
                                 <div className="group flex items-center transition-all">
                                     {/* image can go here */}
-                                    <div className="flex items-center">
+                                    {/* <div className="flex items-center">
                                         <Image props={{
                                             src: '/svg/sapphire.svg',
                                             alt: 'sapphire nw logo',
@@ -149,7 +154,19 @@ const Header = () => {
                                             imgClass: "h-[50px] w-[50px] pr-2"
                                         }} />
                                         <h1 className='font-bold tracking-tight text-3xl'>Sapphire</h1>
-                                    </div>
+                                    </div> */}
+                                    <Image props={{
+                                        src: '/svg/sapphire-text-blue.svg',
+                                        alt: '',
+                                        divClass: "h-[50px] dark:hidden",
+                                        imgClass: "h-[50px]"
+                                    }} />
+                                    <Image props={{
+                                        src: '/svg/sapphire-text-white.svg',
+                                        alt: '',
+                                        divClass: "h-[50px] hidden dark:block",
+                                        imgClass: "h-[50px]"
+                                    }} />
                                 </div>
                             </a>
                         </NextLink>
@@ -241,6 +258,26 @@ const Header = () => {
                         <HeaderItem props={{
                             route: '/solutions/messaging-systems',
                             title: 'Messaging Systems',
+                            onTap: () => closeMenu(),
+                            isCollapsed: false,
+                            className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",
+                            isExternal: false,
+                        }} />
+                    </div>
+                    <div>
+                        <HeaderItem props={{
+                            route: '/solutions/it-services',
+                            title: 'It Services',
+                            onTap: () => closeMenu(),
+                            isCollapsed: false,
+                            className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",
+                            isExternal: false,
+                        }} />
+                    </div>
+                    <div>
+                        <HeaderItem props={{
+                            route: '/solutions/ai-machine-learning',
+                            title: 'AI Machine Learning',
                             onTap: () => closeMenu(),
                             isCollapsed: false,
                             className: "dark:bg-bg-dark-500 bg-bg-200 py-2 px-4 cursor-pointer rounded-md w-full",

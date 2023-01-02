@@ -15,15 +15,18 @@ const Footer = () => {
 
         <footer className="bg-bg-200 dark:bg-bg-dark-500">
             <div className="flex py-8 px-6 justify-between max-w-[1300px] mx-auto">
-                <div className="flex items-center">
-                    <Image props={{
-                        src: '/svg/sapphire.svg',
-                        alt: 'sapphire nw logo',
-                        divClass: "h-[40px] w-[40px]",
-                        imgClass: "h-[40px] w-[40px] pr-2"
-                    }} />
-                    <h1 className='font-bold tracking-tight text-2xl'>Sapphire</h1>
-                </div>
+                <Image props={{
+                    src: '/svg/sapphire-text-blue.svg',
+                    alt: '',
+                    divClass: "h-[40px] dark:hidden",
+                    imgClass: "h-[40px]"
+                }} />
+                <Image props={{
+                    src: '/svg/sapphire-text-white.svg',
+                    alt: '',
+                    divClass: "h-[40px] hidden dark:block",
+                    imgClass: "h-[40px]"
+                }} />
                 <button onClick={() => toggleTheme()} className="p-2 bg-bg-200 border border-bg-400 dark:border-bg-dark-600 dark:bg-bg-dark-600 rounded-md md:hover:opacity-50 transition-opacity">
                     <div className="dark:hidden">
                         <FiMoon size={20} className="text-main" />
@@ -127,6 +130,22 @@ const Footer = () => {
                                 className: "hover:underline"
                             }} />
                         </li>
+                        <li className="mb-4">
+                            <Link props={{
+                                href: "/solutions/it-services",
+                                child: <>IT Services</>,
+                                isExternal: false,
+                                className: "hover:underline"
+                            }} />
+                        </li>
+                        <li className="mb-4">
+                            <Link props={{
+                                href: "/solutions/ai-machine-learning",
+                                child: <>AI Machine Learning</>,
+                                isExternal: false,
+                                className: "hover:underline"
+                            }} />
+                        </li>
                     </ul>
                 </div>
                 <div className="text-center">
@@ -151,7 +170,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="py-6 px-4 bg-bg-dark-500 dark:bg-bg-dark-600 md:flex md:items-center md:justify-between">
+            <div className="py-6 px-4 bg-bg-dark-500 dark:bg-bg-dark-600 flex items-center justify-between">
                 <span className="text-sm text-gray-300 sm:text-center">
                     © 2022 Sapphirenw™. All Rights Reserved.
                 </span>

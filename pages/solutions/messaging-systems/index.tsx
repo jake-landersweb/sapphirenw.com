@@ -37,7 +37,7 @@ const EventManagement = () => {
             <div className="space-y-16 nd:space-y-32">
                 <SolutionsItem description="The Messaging Services We Offer" id="why" hasHeight={false}>
                     <div className="space-y-16 pt-16">
-                        <SolutionsItem2 title={"Enterprise Email System"} desc={"The Sapphire email messaging service is a robust system that can be hosted by us or you. We tust it to manage the email systems for our products, now you can too."} id={"#"}>
+                        <SolutionsItem2 title={"Enterprise Messaging System"} desc={"The Sapphire email messaging service is a robust system that can be hosted by us or you. We tust it to manage the email systems for our products, now you can too."} id={"#"}>
                             <Image props={{
                                 src: "/svg/mail-sent.svg",
                                 alt: "Envelope",
@@ -68,7 +68,7 @@ const EventManagement = () => {
                         <PricingCell props={{
                             title: "One Service",
                             price: "$25",
-                            description: "Using the Crosscheck products are totally free.",
+                            description: "Use an email or mobile notification service.",
                             points: ["Sapphire management", "Optional self hosting", "Flexible rate limit", "Full 24hr support"],
                             isMonthly: true,
                             isFrom: true,
@@ -87,7 +87,7 @@ const EventManagement = () => {
                     nameLabel: undefined,
                     emailLabel: undefined,
                     bodyLabel: "Talk with us about messaging systems systems",
-                    tag: "Messeging systems"
+                    tag: "Messaging systems"
                 }} />
             </div>
         </SolutionsPageWrapper>
