@@ -1,24 +1,17 @@
-import Head from "next/head"
-import BoundsWrapper from "../../components/boundsWrapper"
-import Form from "../../components/form/form"
+import Form from "@/components/form";
+import Header from "@/components/header";
+import Head from "next/head";
 
-const Contact = () => {
-    return <div className="pt-20">
+export default function Contact() {
+    return <>
         <Head>
-            <title key="title">Sapphire - Contact</title>
-            <meta name="keywords" id="keywords" content="Contact Us,Portland Contact Developers,Message Pacific Northwest Software" />
+            <title key="title">Portland AI - Contact</title>
         </Head>
-        <div className="grid place-items-center">
-            <BoundsWrapper>
-                <Form props={{
-                    nameLabel: undefined,
-                    emailLabel: undefined,
-                    bodyLabel: undefined,
-                    tag: undefined
-                }} />
-            </BoundsWrapper>
+        <div className="min-h-[95vh]">
+            <Header />
+            <div className="grid place-items-center pt-8 px-4 pb-8">
+                <Form />
+            </div>
         </div>
-    </div>
+    </>
 }
-
-export default Contact

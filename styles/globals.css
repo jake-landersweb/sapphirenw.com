@@ -2,22 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .subtext {
-        @apply font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400;
-    }
-    .title {
-        @apply text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white;
-    }
-    .subtitle {
-        @apply text-4xl tracking-tight font-extrabold;
-    }
-    .josetitle {
-        @apply font-jose tracking-widest
-    }
-}
-
 @font-face {
   font-family: "JosefinSans";
   src: url("../public/fonts/JosefinSans-Bold.ttf");
+}
+
+@media (min-width: 768px) {
+  .overlap {
+    position: relative;
+    top: 20px !important;
+    right: -40px;
+    z-index: 2;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
+.overlap {
+  position: relative;
+  top: 250px;
+  z-index: 2;
 }

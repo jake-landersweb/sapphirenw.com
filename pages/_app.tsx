@@ -1,35 +1,54 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Header from '../components/header/header'
+import Head from 'next/head';
 import { useEffect } from 'react';
-import { ThemeProvider, useTheme } from "next-themes";
-import Footer from '../components/footer';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { NextUIProvider, createTheme } from '@nextui-org/react'
+import Footer from '@/components/footer';
+
+const theme = createTheme({
+    type: "light", // it could be "light" or "dark"
+    theme: {
+        colors: {
+            primary: '#353AB8',
+            secondary: '#ff6584',
+        },
+    }
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { theme, setTheme } = useTheme()
+    useEffect(() => {
+        AOS.init({
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 50,
+        });
+    }, []);
 
-  useEffect(() => {
-    setTheme("light")
-  }, [])
+    return <>
+        <Head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-L13K300MPS"></script>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-
-  return (
-    <ThemeProvider attribute="class">
-      <div className="scroll-smooth text-txt dark:text-txt-dark bg-bg dark:bg-bg-dark">
-        <div className="grid place-items-center">
-          <div className="fixed top-0 z-50">
-            <Header />
-          </div>
-          <div className="relative w-full min-h-screen pt-[70px] md:pt-[100px] pb-24 md:pb-36">
-            <Component {...pageProps} />
-          </div>
-          <div className="pt-4 w-full">
-            <Footer />
-          </div>
-        </div>
-      </div>
-    </ThemeProvider>
-  )
+              gtag('config', 'G-L13K300MPS');
+            `,
+                }}
+            />
+        </Head>
+        <main className="">
+            <div className="">
+                <NextUIProvider theme={theme}>
+                    <Component {...pageProps} />
+                </NextUIProvider>
+            </div>
+        </main>
+    </>
 }
 
 export default MyApp
