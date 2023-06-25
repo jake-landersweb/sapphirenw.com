@@ -11,9 +11,25 @@ import { GiHand } from 'react-icons/gi';
 import { BiCube } from 'react-icons/bi';
 import ServiceLargeItem from "@/components/serviceLargeItem";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function AppDev() {
     return <div className="">
+        <Head>
+            <title>Sapphire NW</title>
+            <meta name="description" content="Scalable, Impactful App Development Services, Bridging Cutting-Edge Technology and Business Ingenuity for Personalized Industry Success, Handcrafted in the Pacific Northwest." />
+            <meta name="keywords" content="AI Consulting, AI Integration, AI Deployment, AI in Business, Sapphire NW, Large Language Models, AI for SMBs" />
+            <meta name="author" content="Sapphire NW" />
+            <meta property="og:title" content="Sapphire NW" />
+            <meta property="og:description" content="Scalable, Impactful App Development Services, Bridging Cutting-Edge Technology and Business Ingenuity for Personalized Industry Success, Handcrafted in the Pacific Northwest." />
+            <meta property="og:image" content="https://sapphirenw.com/sapphire-email.png" />
+            <meta property="og:url" content="https://sapphirenw.com" />
+            <meta property="og:site_name" content="Sapphire NW" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Sapphire NW" />
+            <meta name="twitter:description" content="Scalable, Impactful App Development Services, Bridging Cutting-Edge Technology and Business Ingenuity for Personalized Industry Success, Handcrafted in the Pacific Northwest." />
+            <meta name="twitter:image" content="https://sapphirenw.com/sapphire-email.png" />
+        </Head>
         <div className="bg-[url('/images/eye.jpg')] bg-cover bg-no-repeat bg-opacity-30 absolute top-0 left-0 w-[100%] h-[100vh] x-[-1]"></div>
         <div className="bg-main-900 bg-opacity-70 absolute top-0 left-0 w-[100%] h-[100vh]"></div>
         <div className="relative z-10">
@@ -65,9 +81,9 @@ export default function AppDev() {
                                 <h2 className='text-4xl md:text-5xl font-bold'>About Us</h2>
                                 <div className="space-y-4 md:max-w-xl 2xl:max-w-3xl">
                                     <p>Located in the bustling heart of the Pacific Northwest, Sapphire NW is a forward-thinking app development firm dedicated to empowering businesses with custom-tailored web, mobile, and desktop applications. Our unique blend of skills in software engineering, user experience design, and business strategy allows us to create impactful apps, particularly for specialized industries in the e-commerce, tech, and service sectors.</p>
-                                    <p>We're more than just a service provider; we are your strategic partner. From conceptualizing your app’s purpose and features to its development and deployment, we're with you every step of the way, equipping your business to flourish in this app-centric world.</p>
-                                    <p>Sapphire NW emerged from the vision to be the leading app development firm in the Pacific Northwest. Today, we're proud to work with a variety of businesses, harnessing our innovative app solutions to sculpt a digitally-enhanced future.</p>
-                                    <p>Welcome to Sapphire NW – where innovative design meets pragmatic solutions, and businesses unlock their app development potential. Let's embark on this digital journey together.</p>
+                                    <p>We&apos;re more than just a service provider; we are your strategic partner. From conceptualizing your app&apos;s purpose and features to its development and deployment, we&apos;re with you every step of the way, equipping your business to flourish in this app-centric world.</p>
+                                    <p>Sapphire NW emerged from the vision to be the leading app development firm in the Pacific Northwest. Today, we&apos;re proud to work with a variety of businesses, harnessing our innovative app solutions to sculpt a digitally-enhanced future.</p>
+                                    <p>Welcome to Sapphire NW – where innovative design meets pragmatic solutions, and businesses unlock their app development potential. Let&apos;s embark on this digital journey together.</p>
                                     <div className="">
                                         <Link href="/about"><p className="text-gray-500 hover:text-acc transition-colors">Learn More &rarr;</p></Link>
                                     </div>

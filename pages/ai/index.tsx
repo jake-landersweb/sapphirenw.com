@@ -21,10 +21,10 @@ const AI = () => {
             <meta name="description" content="Sapphire NW, a leading AI consulting firm, helps small and medium-sized businesses in integrating and leveraging AI technologies effectively to boost profitability, efficiency, and customer satisfaction." />
             <meta name="keywords" content="AI Consulting, AI Integration, AI Deployment, AI in Business, Sapphire NW, Large Language Models, AI for SMBs" />
             <meta name="author" content="Sapphire NW" />
-            <meta property="og:title" content="Sapphire NW" />
+            <meta property="og:title" content="Sapphire NW - AI" />
             <meta property="og:description" content="Sapphire NW, a leading AI consulting firm, helps small and medium-sized businesses in integrating and leveraging AI technologies effectively to boost profitability, efficiency, and customer satisfaction." />
             <meta property="og:image" content="https://sapphirenw.com/sapphire-email.png" />
-            <meta property="og:url" content="https://sapphirenw.com" />
+            <meta property="og:url" content="https://sapphirenw.com/ai" />
             <meta property="og:site_name" content="Sapphire NW" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Sapphire NW" />

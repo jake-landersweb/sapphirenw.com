@@ -16,6 +16,7 @@ module.exports = {
         success: "#0D936B",
         error: "#E74C3C",
         xcheck: "#7bc5d6",
+        autoblog: "#091862",
         g1: "#E2E5ED",
         g5: "#343C46",
         lt: {
