@@ -54,8 +54,8 @@ export default function SportsManagement() {
                     <div className="h-[80vh] grid place-items-center">
                         <div data-aos="fade-up" className="grid max-w-screen-xl px-4 py-8 mx-auto gap-4 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                             <div className="mr-auto place-self-center lg:col-span-7">
-                                <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center md:text-left">Sports Management Software</h1>
-                                <p className="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl text-center md:text-left">Sapphire developed the powerful Crosscheck Sports engine. Power your own personal sports team for a fraction of the price.</p>
+                                <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center md:text-left">Your Sports Teams Managed Effectively.</h1>
+                                <p className="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl text-center md:text-left">Sapphire NW developed the powerful Crosscheck Sports engine. Power your own personal sports team with a feature-rich web and mobile app, for a fraction of the price.</p>
                                 <div className="grid place-items-center md:block mb-4 md:mb-0">
                                 </div>
                             </div>

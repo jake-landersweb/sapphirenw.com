@@ -165,7 +165,7 @@ export default function Header() {
                     }} />
                     <HoverMenu props={{
                         title: "Products",
-                        defaultLink: "/#products",
+                        defaultLink: "",
                         type: HoverMenuType.header,
                         content: <div className=''>
                             {largeProducts()}
@@ -182,7 +182,7 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:block">
                     <Link href={"/contact"}>
-                        <p className="px-6 py-2 border text-lt border-lt hover:border-main-950 hover:bg-gradient-to-r from-main to-acc rounded-md">Contact Us</p>
+                        <p className="button px-4 py-2">Contact Us</p>
                     </Link>
                 </div>
                 {isOpen ? (
@@ -218,6 +218,10 @@ export default function Header() {
                         <div className="space-y-2">
                             <h2 className="text-lg font-medium">Services</h2>
                             {smallServices()}
+                        </div>
+                        <div className="space-y-2">
+                            <h2 className="text-lg font-medium">Products</h2>
+                            {smallProducts()}
                         </div>
                         <div className="space-y-2">
                             <h2 className="text-lg font-medium">Our Company</h2>

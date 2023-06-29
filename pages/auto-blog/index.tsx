@@ -29,8 +29,8 @@ export default function AutoBlog() {
             <meta name="twitter:description" content="Optimize SEO, push your products, and generate organic user engagement for your business or product, automatically." />
             <meta name="twitter:image" content="https://sapphirenw.com/sapphire-email.png" />
         </Head>
-        <div className="bg-[url('/images/space.jpg')] bg-cover bg-no-repeat bg-opacity-30 absolute top-0 left-0 w-[100%] h-[100vh] x-[-1]"></div>
-        <div className="bg-main-900 bg-opacity-70 absolute top-0 left-0 w-[100%] h-[100vh]"></div>
+        <div className="bg-[url('/images/ai-content-creation.png')] bg-cover bg-no-repeat bg-opacity-30 absolute top-0 left-0 w-[100%] h-[100vh] x-[-1]"></div>
+        <div className="bg-main-900 bg-opacity-80 absolute top-0 left-0 w-[100%] h-[100vh]"></div>
         <div className="relative z-10">
             <div className="">
                 <Header />
@@ -38,7 +38,7 @@ export default function AutoBlog() {
                     <div className="h-[80vh] grid place-items-center">
                         <div data-aos="fade-up" className="grid max-w-screen-xl px-4 py-8 mx-auto gap-4 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                             <div className="mr-auto place-self-center lg:col-span-6">
-                                <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center md:text-left">Meet Our Auto-Blog.</h1>
+                                <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center md:text-left">Meet Your New Online Content Creator.</h1>
                                 <p className="max-w-2xl mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl text-center md:text-left">Optimize SEO, push your products, and generate organic user engagement for your business or product, automatically.</p>
                                 <div className="grid place-items-center md:block mb-4 md:mb-0">
                                 </div>

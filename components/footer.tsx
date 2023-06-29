@@ -11,6 +11,10 @@ export type CollapseProps = {
 export default function Footer({ collapseItems, initTopic }: { collapseItems: CollapseProps[], initTopic?: string }) {
 
     const getItems = () => {
+        if (collapseItems.length == 0) {
+            return <></>
+        }
+
         const items = []
 
         for (let i = 0; i < collapseItems.length; i++) {
@@ -20,7 +24,9 @@ export default function Footer({ collapseItems, initTopic }: { collapseItems: Co
                 </Collapse>
             )
         }
-        return items
+        return <Collapse.Group bordered>
+            {items}
+        </Collapse.Group>
     }
 
     return <div className="">
@@ -39,15 +45,13 @@ export default function Footer({ collapseItems, initTopic }: { collapseItems: Co
                         },
                     }
                 })}>
-                    <Collapse.Group bordered>
-                        {getItems()}
-                    </Collapse.Group>
+                    {getItems()}
                 </div>
             </SafeArea>
         </div>
         <div className="py-6 px-4 bg-dk-700 text-lt-400 flex items-center justify-between z-50">
             <span className="text-sm text-gray-300 sm:text-center">
-                © 2023 Portland AI™. All Rights Reserved.
+                © 2023 Sapphire NW™. All Rights Reserved.
             </span>
             <a href="https://www.linkedin.com/company/sapphire-nw/" target="_blank" rel="noopener noreferrer"><BsLinkedin size={30} className="text-gray-600 hover:text-gray-500 transition-colors" /></a>
         </div>

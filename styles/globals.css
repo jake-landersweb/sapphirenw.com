@@ -22,6 +22,12 @@
   }
 }
 
+@layer components {
+  .button {
+    @apply border border-lt hover:bg-lt rounded-md hover:text-main transition-colors font-medium tracking-wider;
+  }
+}
+
 
 .overlap {
   position: relative;

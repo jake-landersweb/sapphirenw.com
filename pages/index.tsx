@@ -5,13 +5,15 @@ import ServiceCell from "@/components/serviceCell";
 import Image from "next/image";
 import { BsLayersHalf } from "react-icons/bs";
 import { RiBrushLine, RiGroupLine } from 'react-icons/ri';
-import { AiOutlineMobile } from 'react-icons/ai';
+import { AiOutlineMobile, AiOutlineRise } from 'react-icons/ai';
 import FeedbackCell from "@/components/feedbackCell";
 import { GiHand } from 'react-icons/gi';
-import { BiCube } from 'react-icons/bi';
+import { BiCube, BiServer, BiWorld } from 'react-icons/bi';
 import ServiceLargeItem from "@/components/serviceLargeItem";
 import Link from "next/link";
 import Head from "next/head";
+import { LuBrain } from 'react-icons/lu'
+import { FaBrain } from "react-icons/fa";
 
 export default function AppDev() {
     return <div className="">
@@ -37,11 +39,11 @@ export default function AppDev() {
                 <Header />
                 <SafeArea>
                     <div data-aos="fade-up" className="px-4 min-h-[70vh] md:min-h-[80vh] space-y-8 text-lt mt-8 md:mt-16">
-                        <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>Crafting Dynamic Apps Tailored for Your Success</h1>
-                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Scalable, Impactful App Development Services, Bridging Cutting-Edge Technology and Business Ingenuity for Personalized Industry Success, Handcrafted in the Pacific Northwest</p>
+                        <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>App and AI Development that Works For You.</h1>
+                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Scalable Cloud Application Development Services. Integrating the Latest Technogies and AI Paradigms Into Your Business, Handcrafted in the Pacific Northwest</p>
                         <div className="grid place-items-center">
                             <a href={"#offerings"}>
-                                <p className="px-6 py-4 border border-txt hover:border-main-900 hover:bg-gradient-to-r from-main to-acc rounded-md font-medium tracking-wider">LEARN HOW WE CAN HELP</p>
+                                <p className="button px-6 py-4">LEARN HOW WE CAN HELP</p>
                             </a>
                         </div>
                     </div>
@@ -53,21 +55,21 @@ export default function AppDev() {
                             <div className="grid lg:grid-cols-3 gap-4">
                                 <ServiceCell props={{
                                     icon: <BsLayersHalf size={50} />,
-                                    title: 'Bespoke App Solutions',
-                                    description: 'At Sapphire NW, we go beyond traditional development services, offering a suite of custom-tailored app solutions designed to elevate businesses in unique and impactful ways. Our aim is to help you fully harness the power of digital platforms, whether that means streamlining operations, enhancing user engagement, or deriving insights from user behavior data.',
-                                    href: '#app-solutions'
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <RiBrushLine size={50} />,
-                                    title: 'User Interface & Experience Design',
-                                    description: "We believe that an application’s success lies not just in its functionality, but also in its aesthetics and user experience. Our team combines innovative design principles with a deep understanding of user psychology to create visually compelling, easy-to-use applications that not just meet, but exceed user expectations. It's not just about building an app—it's about creating a memorable user journey.",
-                                    href: '#ui-ux-design'
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <AiOutlineMobile size={50} />,
-                                    title: 'Native App Development',
+                                    title: 'Native Application Development',
                                     description: "Leverage the power of platform-specific technologies with Sapphire NW's native app development services. We specialize in creating highly responsive, efficient, and platform-optimized applications for the web, iOS, Android, Windows, and MacOS. Our focus on native development ensures seamless performance, better user experience, and higher app store acceptance rates.",
-                                    href: '#native-development'
+                                    href: '#who-you-are'
+                                }} />
+                                <ServiceCell props={{
+                                    icon: <LuBrain size={50} />,
+                                    title: 'AI Integrations',
+                                    description: "We use the latest LLMs from OpenAI, Anthropic, Google, and Hugging Face and tailor them to work for your existing workflows, supercharging your business practices. From the most advanced AI content-creation workflow in the industry, to crafting large scale internal AI systems that integrate seamlessly with your existing practices, we are your go-to AI developer/consultants.",
+                                    href: '/ai'
+                                }} />
+                                <ServiceCell props={{
+                                    icon: <BiServer size={50} />,
+                                    title: 'Improvement and Hosting',
+                                    description: "Does your business's growth eclipse the capabilities of an older application? Have you become dissatisfied with your current development team? We at Sapphire NW specialize in revamping online business presence. Our expertise will supercharge your web traffic, optimize your SEO ratings, all while keeping hosting costs down. Together, we will create a flexible development plan that works for your online business goals.",
+                                    href: '/existing-software'
                                 }} />
                             </div>
                         </div>
@@ -80,10 +82,9 @@ export default function AppDev() {
                             <div className="bg-main-900 pt-[300px] col-span-4 p-8 md:p-16 md:pl-32 space-y-4 md:z-[1] md:relative">
                                 <h2 className='text-4xl md:text-5xl font-bold'>About Us</h2>
                                 <div className="space-y-4 md:max-w-xl 2xl:max-w-3xl">
-                                    <p>Located in the bustling heart of the Pacific Northwest, Sapphire NW is a forward-thinking app development firm dedicated to empowering businesses with custom-tailored web, mobile, and desktop applications. Our unique blend of skills in software engineering, user experience design, and business strategy allows us to create impactful apps, particularly for specialized industries in the e-commerce, tech, and service sectors.</p>
-                                    <p>We&apos;re more than just a service provider; we are your strategic partner. From conceptualizing your app&apos;s purpose and features to its development and deployment, we&apos;re with you every step of the way, equipping your business to flourish in this app-centric world.</p>
-                                    <p>Sapphire NW emerged from the vision to be the leading app development firm in the Pacific Northwest. Today, we&apos;re proud to work with a variety of businesses, harnessing our innovative app solutions to sculpt a digitally-enhanced future.</p>
-                                    <p>Welcome to Sapphire NW – where innovative design meets pragmatic solutions, and businesses unlock their app development potential. Let&apos;s embark on this digital journey together.</p>
+                                    <p>Located in the bustling heart of the Pacific Northwest, Sapphire NW is a forward-thinking app development firm dedicated to empowering businesses with custom-tailored web, mobile, and desktop applications. Our unique blend of skills in software engineering, user experience design, and business strategy allows us to create impactful apps, particularly those leveraging artificial intelligence.</p>
+                                    <p>But we&apos;re more than just a service provider; we are your strategic ally in the digital era. Our services span from conceptualizing your app&apos;s purpose and features to its development and deployment, thereby empowering your business to thrive in today&apos;s app-centric world. Additionally, our expertise in the field of artificial intelligence sets us apart. Utilizing the latest Large Language Models (LLMs) from renowned providers like OpenAI, Anthropic, Google, and Hugging Face, we can fine-tune these sophisticated models to boost your existing workflows, leading to unprecedented levels of efficiency and innovation.</p>
+                                    <p>Our company was born out of a vision to be the leading app and AI development firm in the Pacific Northwest. Today, we take immense pride in partnering with a variety of businesses, using our innovative solutions to shape a digitally-enhanced, AI-driven future.</p>
                                     <div className="">
                                         <Link href="/about"><p className="text-gray-500 hover:text-acc transition-colors">Learn More &rarr;</p></Link>
                                     </div>
@@ -100,27 +101,27 @@ export default function AppDev() {
                         }} />
                     </div>
                 </div>
-                <div id="who-you-are" className="bg-lt-100 px-4 text-dk py-8 md:py-16">
+                <div className="bg-lt-100 px-4 text-dk py-8 md:py-16">
                     <div className="max-w-[1000px] mx-auto">
                         <div className="space-y-16">
-                            <h2 id="offerings" className='text-4xl md:text-5xl font-bold'>Who You Are</h2>
+                            <h2 id="who-you-are" className='text-4xl md:text-5xl font-bold'>Who You Are</h2>
                             <div className="grid grid-cols-1 gap-4 max-w-[1000px] mx-auto">
                                 <ServiceCell props={{
-                                    icon: <GiHand size={50} />,
-                                    title: 'Visionary Businesses and Tech Innovators',
-                                    description: "Whether you're a small startup or an established organization, you see the potential for digital transformation through tailor-made applications. We understand that while you have brilliant ideas, you may lack the expertise, time, or resources to transform these ideas into effective app solutions. That's where Sapphire NW steps in. We bring our technical proficiency to your unique challenges, working together to transform your innovative ideas into scalable app-based solutions. Whether you aim to streamline operations, increase efficiency, or provide your users with an unparalleled digital experience, we're here to support you.",
+                                    icon: <LuBrain size={50} />,
+                                    title: 'AI Curious Businesses',
+                                    description: "You've heard the buzz about AI, and you're intrigued. You know there's a lot of potential in it, but the world of machine learning seems overwhelming and complex. You need a reliable partner to make sense of it all and integrate it into your workflows. That's exactly where we come in - we'll handle the complex stuff, you reap the benefits.",
                                     href: ''
                                 }} />
                                 <ServiceCell props={{
-                                    icon: <RiGroupLine size={50} />,
-                                    title: 'Industry Specialists Looking for Custom App Solutions',
-                                    description: "You're an expert in your field, navigating the intricacies of your industry every day. We understand that your industry isn't a one-size-fits-all kind, and the apps you use shouldn't be either. At Sapphire NW, we bring in-depth knowledge of app development, paired with a nuanced understanding of your industry needs. We don't just build apps; we tailor them to your unique context, ensuring the solutions we develop are technologically advanced and perfectly suited to your needs. Let's embrace the digital transformation together, enhancing your industry expertise with our custom app solutions.",
+                                    icon: <BiWorld size={50} />,
+                                    title: 'Web Presence Seekers',
+                                    description: "Your business is booming offline, but your online presence? Not so much. Maybe you've got a website, but it's out of date, or you haven't got around to developing one at all. You realize it's time to bring your business to the digital forefront. We can make that happen, giving you a shiny, modern web presence that reflects your brand perfectly.",
                                     href: ''
                                 }} />
                                 <ServiceCell props={{
-                                    icon: <BiCube size={50} />,
-                                    title: 'Idea Generators Seeking App Implementation',
-                                    description: "You have the ideas and understand the potential of what the right application can do for your operation. But turning that idea into a functional app is not always straightforward. This is where Sapphire NW excels. We bring your app aspirations to life, no matter how big or small your ideas might be. Our role is to simplify the complexities, navigate the challenges, and implement your vision with precision. Your ideas are the blueprint; we're the builders turning them into reality.",
+                                    icon: <AiOutlineRise size={50} />,
+                                    title: 'Tech Upgrade Enthusiasts',
+                                    description: "Your business model is solid, your products or services are great, but there's room for improvement in your technological infrastructure. Maybe you have an existing app that's clunky and outdated, or perhaps you're keen to develop new software to streamline operations. We're here to revamp your tech, optimizing your systems and ultimately making your life easier.",
                                     href: ''
                                 }} />
                             </div>
@@ -133,11 +134,13 @@ export default function AppDev() {
                             <h2 id="offerings" className='text-4xl md:text-5xl font-bold'>What Makes Us Different?</h2>
                             <div className="space-y-16 md:space-y-32">
                                 <ServiceLargeItem props={{
-                                    title: "Fluid Design Language",
-                                    src: "/svg/design-process.svg",
-                                    alt: "Design Process",
+                                    title: "Seamless AI Integration",
+                                    src: "/images/ai-brain.png",
+                                    alt: "AI brain",
                                     reverse: false,
-                                    description: "Before working on a project, the designers at Sapphire work to create a cohesive design template with guidance from you. Then, this design template is passed to the engineers to build software that looks as great as it works."
+                                    description: "Sapphire NW believes in the transformative power of AI. We don't just implement AI systems, we integrate them seamlessly into your business, enhancing operations and fostering growth. We're committed to creating AI solutions that work in perfect harmony with your existing processes. With Sapphire NW, expect more than mere innovation—experience the future of business, today.",
+                                    isNew: true,
+                                    learnMoreHref: "/ai"
                                 }} />
                                 <ServiceLargeItem props={{
                                     title: "Drive To Improve",
@@ -161,13 +164,11 @@ export default function AppDev() {
                                     description: "With Sapphire NW, you're never alone on your digital journey. We remain connected, actively hosting and upgrading your infrastructure, while partnering with you to map out future strategies. Experience a partnership that evolves with your needs, balancing current stability with future innovation."
                                 }} />
                                 <ServiceLargeItem props={{
-                                    title: "Seamless AI Integration",
-                                    src: "/images/ai-brain.png",
-                                    alt: "AI brain",
+                                    title: "Fluid Design Language",
+                                    src: "/svg/design-process.svg",
+                                    alt: "Design Process",
                                     reverse: false,
-                                    description: "Sapphire NW believes in the transformative power of AI. We don't just implement AI systems, we integrate them seamlessly into your business, enhancing operations and fostering growth. We're committed to creating AI solutions that work in perfect harmony with your existing processes. With Sapphire NW, expect more than mere innovation—experience the future of business, today.",
-                                    isNew: true,
-                                    learnMoreHref: "/ai"
+                                    description: "Before working on a project, the designers at Sapphire work to create a cohesive design template with guidance from you. Then, this design template is passed to the engineers to build software that looks as great as it works."
                                 }} />
                             </div>
                         </div>

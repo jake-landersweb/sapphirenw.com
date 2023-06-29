@@ -20,7 +20,7 @@ const HoverMenu = ({ props }: { props: HoverMenuProps }) => {
     }
 
     return <>
-        <div className="grid place-items-center ">
+        <div className="grid place-items-center">
             <div className="group h-min place-items-center">
                 <Link props={{
                     href: defaultLink,
@@ -33,7 +33,7 @@ const HoverMenu = ({ props }: { props: HoverMenuProps }) => {
                 }} />
                 <ul className="z-50 w-fit max-w-[400px] min-w-[250px] absolute px-4 invisible opacity-0 group-hover:opacity-100 scale-[.8] group-hover:scale-100 group-hover:visible transition-all duration-75">
                     <div className="h-1 bg-transparent"></div>
-                    <div className="overflow-y-scroll max-h-[75vh] border-t-8 border-t-main rounded-md bg-dk shadow-xl space-y-4">
+                    <div className="max-h-[75vh] border-t-8 border-t-main rounded-md bg-dk shadow-xl space-y-4">
                         <div className="p-1">
                             {content}
                         </div>
