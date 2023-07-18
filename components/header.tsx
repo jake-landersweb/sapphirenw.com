@@ -39,12 +39,12 @@ export default function Header() {
             isExternal: false,
             isNew: true,
         },
-        {
-            title: "Portfolio",
-            desc: "Check out some of the featured products we have made for other clients.",
-            href: "/portfolio",
-            isExternal: false,
-        },
+        // {
+        //     title: "Portfolio",
+        //     desc: "Check out some of the featured products we have made for other clients.",
+        //     href: "/portfolio",
+        //     isExternal: false,
+        // },
     ]
 
     const aboutUsItems: HoverMenuItemProps[] = [
