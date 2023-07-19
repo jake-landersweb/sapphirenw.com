@@ -40,7 +40,7 @@ export default function AppDev() {
                 <SafeArea>
                     <div data-aos="fade-up" className="px-4 min-h-[70vh] md:min-h-[80vh] space-y-8 text-lt mt-8 md:mt-16">
                         <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>App and AI Development that Works For You.</h1>
-                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Scalable Cloud Application Development Services. Integrating the Latest Technogies and AI Paradigms Into Your Business, Handcrafted in the Pacific Northwest</p>
+                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Scalable Cloud Application Development Services. Integrating the Latest Technologies and AI Paradigms Into Your Business, Handcrafted in the Pacific Northwest</p>
                         <div className="grid place-items-center">
                             <a href={"#offerings"}>
                                 <p className="button px-6 py-4">LEARN HOW WE CAN HELP</p>
