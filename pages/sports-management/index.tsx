@@ -85,21 +85,21 @@ export default function SportsManagement() {
                             </div>
                             <div className="space-y-8 md:space-y-16 grid place-items-center">
                                 <div className="space-y-4 overflow-hidden">
-                                    <div data-aos="fade-left" data-aos-delay="100" className="flex items-center space-x-4">
+                                    <div data-aos="fade-up" data-aos-delay="100" className="flex items-center space-x-4">
                                         <p className="h-[50px] w-[50px] min-h-[50px] min-w-[50px] bg-acc text-white rounded-full grid place-items-center text-lg font-bold">1</p>
                                         <div className="">
                                             <h3 className="text-2xl font-bold grid place-items-center md:block">Creating a sports team</h3>
                                             <p className="text-gray-500 md:text-left text-center max-w-2xl">First, you need to create a page for your team. This includes your team name, your sport, and some various configuration options like colors, stats, and custom field options.</p>
                                         </div>
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay="200" className="flex items-center space-x-4">
+                                    <div data-aos="fade-up" data-aos-delay="200" className="flex items-center space-x-4">
                                         <p className="h-[50px] w-[50px] min-h-[50px] min-w-[50px] bg-acc text-white rounded-full grid place-items-center text-lg font-bold">2</p>
                                         <div className="">
                                             <h3 className="text-2xl font-bold grid place-items-center md:block">Uploading an existing roster</h3>
                                             <p className="text-gray-500 md:text-left text-center max-w-2xl">Next, you can download the Crosscheck Sports roster excel template, fill out your roster information like email, name, number, and jersey size. Then you can import this sheet into the app to automatically create your roster.</p>
                                         </div>
                                     </div>
-                                    <div data-aos="fade-left" data-aos-delay="300" className="flex items-center space-x-4">
+                                    <div data-aos="fade-up" data-aos-delay="300" className="flex items-center space-x-4">
                                         <p className="h-[50px] w-[50px] min-h-[50px] min-w-[50px] bg-acc text-white rounded-full grid place-items-center text-lg font-bold">3</p>
                                         <div className="">
                                             <h3 className="text-2xl font-bold grid place-items-center md:block">Sync League Calendar</h3>
@@ -118,7 +118,7 @@ export default function SportsManagement() {
                                 <h2 className='text-4xl md:text-5xl font-bold'>What This Gets You</h2>
                                 <p className="text-lg text-gray-500 max-w-2xl text-center">Following the above steps automatically gives you access to the following features with no setup.</p>
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-4 overflow-hidden">
                                 {cell("/images/schedule-management.png", "Sports Schedule Management", "/schedule-management", "Schedule Management", "A schedule needs to be a frictionless exchange of information. We give you the right tools for the job. Create games, practices, or other events, along with custom information to deliver to your users.", false)}
                                 {cell("/images/roster-management.png", "Roster Management", "/roster-management", "Roster Management", "Crosscheck was created out of the need for better roster management. Gone are the days of old Excel spreadsheets, we give complete customization over rosters in a tiered system: team, season, and event.", true)}
                                 {cell("/images/customization.png", "Customization", "/customization", "Customization", "We can't think of every use case that you may have, but we don't have to! The Crosscheck engine gives you the ability to add any custom information you want at any level. Along with appearance, tailor make the app experience for your team!", false)}
