@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import SafeArea from "@/components/safeArea";
 import ServiceCell from "@/components/serviceCell";
 import Image from "next/image";
-import { BsLayersHalf } from "react-icons/bs";
+import { BsGlobeAmericas, BsLayersHalf, BsLinkedin } from "react-icons/bs";
 import { RiBrushLine, RiGroupLine } from 'react-icons/ri';
 import { AiOutlineMobile, AiOutlineRise } from 'react-icons/ai';
 import FeedbackCell from "@/components/feedbackCell";
@@ -14,6 +14,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { LuBrain } from 'react-icons/lu'
 import { FaBrain } from "react-icons/fa";
+import Form from "@/components/form";
 
 export default function AppDev() {
     return <div className="">
@@ -39,39 +40,108 @@ export default function AppDev() {
                 <Header />
                 <SafeArea>
                     <div data-aos="fade-up" className="px-4 min-h-[70vh] md:min-h-[80vh] space-y-8 text-lt mt-8 md:mt-16">
-                        <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>App and AI Development that Works For You.</h1>
-                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Scalable Cloud Application Development Services. Integrating the Latest Technologies and AI Paradigms Into Your Business, Handcrafted in the Pacific Northwest</p>
+                        <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>Building Powerful and Scaleable Applications For The Future.</h1>
+                        <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Sapphire NW is focused on building powerful applications in-house for all platforms utilizing the latest technologies and AI integrations.</p>
                         <div className="grid place-items-center">
                             <a href={"#offerings"}>
-                                <p className="button px-6 py-4">LEARN HOW WE CAN HELP</p>
+                                <p className="button px-6 py-4">LEARN MORE ABOUT US</p>
                             </a>
                         </div>
                     </div>
                 </SafeArea>
-                <div className="bg-lt-100 text-dk py-16 md:py-32 md:space-y-32">
+                <div className="bg-dk-800 text-lt py-16 md:py-32 md:space-y-32">
                     <SafeArea className="px-4 md:px-8">
-                        <div className="space-y-16">
-                            <h2 id="offerings" className='text-4xl md:text-5xl font-bold'>What We Offer</h2>
-                            <div className="grid lg:grid-cols-3 gap-4">
-                                <ServiceCell props={{
-                                    icon: <BsLayersHalf size={50} />,
-                                    title: 'Native Application Development',
-                                    description: "Leverage the power of platform-specific technologies with Sapphire NW's native app development services. We specialize in creating highly responsive, efficient, and platform-optimized applications for the web, iOS, Android, Windows, and MacOS. Our focus on native development ensures seamless performance, better user experience, and higher app store acceptance rates.",
-                                    href: '#who-you-are'
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <LuBrain size={50} />,
-                                    title: 'AI Integrations',
-                                    description: "We use the latest LLMs from OpenAI, Anthropic, Google, and Hugging Face and tailor them to work for your existing workflows, supercharging your business practices. From the most advanced AI content-creation workflow in the industry, to crafting large scale internal AI systems that integrate seamlessly with your existing practices, we are your go-to AI developer/consultants.",
-                                    href: '/ai'
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <BiServer size={50} />,
-                                    title: 'Improvement and Hosting',
-                                    description: "Does your business's growth eclipse the capabilities of an older application? Have you become dissatisfied with your current development team? We at Sapphire NW specialize in revamping online business presence. Our expertise will supercharge your web traffic, optimize your SEO ratings, all while keeping hosting costs down. Together, we will create a flexible development plan that works for your online business goals.",
-                                    href: '/existing-software'
-                                }} />
-                            </div>
+                        <div className="space-y-8">
+                            <h2 id="offerings" className='text-4xl md:text-5xl font-bold'>Current Projects</h2>
+                            <ServiceLargeItem props={{
+                                title: "Intelligent Content Creation",
+                                src: "/images/ai-brain.png",
+                                alt: "AI brain",
+                                reverse: false,
+                                description: "Sapphire NW believes in the transformative power of AI, while also being concious of recycled information. That is why we have built the most powerful AI content creation tool to create long-form, well researched documents on a wide array of topics. These topics can then be human-verified and advertised on a blog, and used to create insightful social media impacts for your services and products.",
+                                isNew: true,
+                                learnMoreHref: "/ai",
+                                content: <div className="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                    <a href="https://blog.portlandai.io" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                        <div className="pr-4">
+                                            <BsGlobeAmericas size={27} />
+                                        </div>
+                                        <div className="text-left">
+                                            <div className="mb-1 text-xs">View the</div>
+                                            <div className="-mt-1 font-sans text-sm font-semibold">Live Demo</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            }} />
+                            <ServiceLargeItem props={{
+                                title: "Workout Notepad",
+                                src: "/images/wn-graphic.png",
+                                alt: "Workout Notepad Showcase",
+                                reverse: true,
+                                description: "Workout Notepad was crafted out of our passion for exercise and overall health and wellbeing. Existing mobile apps did not capture the essence of what a workout log is all about, so we set out to create the most ellegant, seamless, and feature complete workout journal for experienced athletes of all kinds. Workout Notepad represents our attention to detail.",
+                                isNew: true,
+                                content: <div className="">
+                                    <div className="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                        <a href="https://apps.apple.com/pk/app/workout-notepad/id6453561144" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                            <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+                                            <div className="text-left">
+                                                <div className="mb-1 text-xs">Download on the</div>
+                                                <div className="-mt-1 font-sans text-sm font-semibold">App Store</div>
+                                            </div>
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.landersweb.workout_notepad_v2" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                            <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+                                            <div className="text-left">
+                                                <div className="mb-1 text-xs">Get in on</div>
+                                                <div className="-mt-1 font-sans text-sm font-semibold">Google Play</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }} />
+                            <ServiceLargeItem props={{
+                                title: "Crosscheck Sports",
+                                src: "/images/xcheck-showcase.png",
+                                alt: "Crosscheck Sports Showcase",
+                                reverse: false,
+                                description: "The first production app our firm developed. Born out of our personal frustrations with existing sports management apps, Crosscheck Sports was built with flexbility and customization in mind. Our experience participating, managing, and leading sports teams at the youth, adult, and collegiate level equips us with the experience to identify the tools needed most by serious team managers.",
+                                isNew: false,
+                                learnMoreHref: "/sports-management",
+                                content: <div className="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                                    <a href="https://apps.apple.com/pk/app/crosscheck-hockey/id1585600361" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                        <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+                                        <div className="text-left">
+                                            <div className="mb-1 text-xs">Download on the</div>
+                                            <div className="-mt-1 font-sans text-sm font-semibold">App Store</div>
+                                        </div>
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.landersweb.pnflutter" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                        <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+                                        <div className="text-left">
+                                            <div className="mb-1 text-xs">Get in on</div>
+                                            <div className="-mt-1 font-sans text-sm font-semibold">Google Play</div>
+                                        </div>
+                                    </a>
+                                    <a href="https://crosschecksports.com" target="_blank" rel="noopener noreferrer" className={`w-full sm:w-auto bg-dk-600 hover:bg-dk-400 text-lt-400 rounded-md inline-flex items-center justify-center px-4 py-2.5`}>
+                                        <div className="pr-4">
+                                            <BsGlobeAmericas size={27} />
+                                        </div>
+                                        <div className="text-left">
+                                            <div className="mb-1 text-xs">View the</div>
+                                            <div className="-mt-1 font-sans text-sm font-semibold">Website</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            }} />
+                            <ServiceLargeItem props={{
+                                title: "Cheetah PMP Management",
+                                src: "/images/cheetah.png",
+                                alt: "Cheetah PMP Management",
+                                reverse: true,
+                                description: "Cheetah project management courses represent the premier way to study for and pass your PMP certificaition. With her clients boasting one of the highest pass percentages in the country, her firm busy firm requires constant attention to detail. We developed a completely custom learning management system (LMS) for use in her courses.",
+                                isNew: false,
+                                learnMoreHref: "/sports-management"
+                            }} />
                         </div>
                     </SafeArea>
                     <div id="about" className="text-lt mt-[-200px] md:pt-0">
@@ -93,102 +163,22 @@ export default function AppDev() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-lt-100 px-4 text-dk py-8 md:py-16">
-                    <div className="max-w-2xl mx-auto">
-                        <FeedbackCell props={{
-                            author: 'Michelle Labrosse - Cheetah Learning',
-                            feedback: 'Kevin has been the primary programmer for our business for the past 15 years. We‘ve gone through numerous technology changes in that time and Kevin has kept up with it all making sure our business is best leveraging the available technology to keep our highly automated business running smoothly. Besides being an astute business man who often leads the changes we need to make to stay viable, he is also very responsive to make the changes we request as well.'
-                        }} />
-                    </div>
+                <div className="bg-dk-800">
+                    <SafeArea className="px-4 md:px-8 grid place-items-center">
+                        <h2 id="offerings" className='text-2xl md:text-3xl font-bold text-center'>Collaborators, Not Clients.</h2>
+                        <p className="text-center text-gray-500 text-lg max-w-4xl">We are looking for passionate and innovative business owners and entrepreneurs to collaborate with on projects. If you have an interesting business proposal, and think our skillsets may align, we would love to hear from you.</p>
+                    </SafeArea>
                 </div>
-                <div className="bg-lt-100 px-4 text-dk py-8 md:py-16">
-                    <div className="max-w-[1000px] mx-auto">
-                        <div className="space-y-16">
-                            <h2 id="who-you-are" className='text-4xl md:text-5xl font-bold'>Who You Are</h2>
-                            <div className="grid grid-cols-1 gap-4 max-w-[1000px] mx-auto">
-                                <ServiceCell props={{
-                                    icon: <LuBrain size={50} />,
-                                    title: 'AI Curious Businesses',
-                                    description: "You've heard the buzz about AI, and you're intrigued. You know there's a lot of potential in it, but the world of machine learning seems overwhelming and complex. You need a reliable partner to make sense of it all and integrate it into your workflows. That's exactly where we come in - we'll handle the complex stuff, you reap the benefits.",
-                                    href: ''
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <BiWorld size={50} />,
-                                    title: 'Web Presence Seekers',
-                                    description: "Your business is booming offline, but your online presence? Not so much. Maybe you've got a website, but it's out of date, or you haven't got around to developing one at all. You realize it's time to bring your business to the digital forefront. We can make that happen, giving you a shiny, modern web presence that reflects your brand perfectly.",
-                                    href: ''
-                                }} />
-                                <ServiceCell props={{
-                                    icon: <AiOutlineRise size={50} />,
-                                    title: 'Tech Upgrade Enthusiasts',
-                                    description: "Your business model is solid, your products or services are great, but there's room for improvement in your technological infrastructure. Maybe you have an existing app that's clunky and outdated, or perhaps you're keen to develop new software to streamline operations. We're here to revamp your tech, optimizing your systems and ultimately making your life easier.",
-                                    href: ''
-                                }} />
-                            </div>
-                        </div>
+                <footer className="bg-dk-800">
+                    <div className="grid place-items-center p-8">
+                        <Form title="Interested in Working With Us?" />
                     </div>
-                </div>
-                <div id="who-you-are" className="bg-lt-200 px-4 text-dk py-8 md:py-16">
-                    <div className="max-w-[1000px] mx-auto">
-                        <div className="space-y-16">
-                            <h2 id="offerings" className='text-4xl md:text-5xl font-bold'>What Makes Us Different?</h2>
-                            <div className="space-y-16 md:space-y-32">
-                                <ServiceLargeItem props={{
-                                    title: "Seamless AI Integration",
-                                    src: "/images/ai-brain.png",
-                                    alt: "AI brain",
-                                    reverse: false,
-                                    description: "Sapphire NW believes in the transformative power of AI. We don't just implement AI systems, we integrate them seamlessly into your business, enhancing operations and fostering growth. We're committed to creating AI solutions that work in perfect harmony with your existing processes. With Sapphire NW, expect more than mere innovation—experience the future of business, today.",
-                                    isNew: true,
-                                    learnMoreHref: "/ai"
-                                }} />
-                                <ServiceLargeItem props={{
-                                    title: "Drive To Improve",
-                                    src: "/svg/improvement.svg",
-                                    alt: "Improvement",
-                                    reverse: true,
-                                    description: "Sometimes good design takes a second pass. That's why we always value input from our customer before comitting to a design. Plus, once a product is released, our drive for design perfection is reflected in continuous updates and tweaks to the design."
-                                }} />
-                                <ServiceLargeItem props={{
-                                    title: "Service Dashboards",
-                                    src: "/svg/charts.svg",
-                                    alt: "Web dashboards",
-                                    reverse: false,
-                                    description: "Discover the power of intuitive control with Sapphire NW's 'Service Dashboard'. A single interface provides comprehensive tools and advanced analytics, transforming how you interact with your applications. Gain insights, make decisions, and propel your business to new heights. With our Service Dashboard, take the driver's seat in your digital journey."
-                                }} />
-                                <ServiceLargeItem props={{
-                                    title: "Ongoing Support and Consulting",
-                                    src: "/images/support.png",
-                                    alt: "Web support",
-                                    reverse: true,
-                                    description: "With Sapphire NW, you're never alone on your digital journey. We remain connected, actively hosting and upgrading your infrastructure, while partnering with you to map out future strategies. Experience a partnership that evolves with your needs, balancing current stability with future innovation."
-                                }} />
-                                <ServiceLargeItem props={{
-                                    title: "Fluid Design Language",
-                                    src: "/svg/design-process.svg",
-                                    alt: "Design Process",
-                                    reverse: false,
-                                    description: "Before working on a project, the designers at Sapphire work to create a cohesive design template with guidance from you. Then, this design template is passed to the engineers to build software that looks as great as it works."
-                                }} />
-                            </div>
-                        </div>
+                    <div className="py-6 px-4 bg-dk-700 text-lt-400 flex items-center justify-between z-50">
+                        <span className="text-sm text-gray-300 sm:text-center">
+                            © 2023 Sapphire NW™. All Rights Reserved.
+                        </span>
+                        <a href="https://www.linkedin.com/company/sapphire-nw/" target="_blank" rel="noopener noreferrer"><BsLinkedin size={30} className="text-gray-600 hover:text-gray-500 transition-colors" /></a>
                     </div>
-                </div>
-                <footer>
-                    <Footer collapseItems={[
-                        {
-                            title: "How will app development integrate with my existing business operations?",
-                            description: "At Sapphire NW, our app development process is designed to mesh seamlessly with your existing business model. We analyze your workflows, pinpoint areas where a bespoke app can enhance efficiency or user engagement, and tailor solutions that integrate smoothly into your operations."
-                        },
-                        {
-                            title: "What kind of return on investment can I expect from a custom-developed app?",
-                            description: "While ROI can differ per specific applications, custom-developed apps usually enhance customer engagement, streamline operations, and provide valuable user behavior data. Most of our clients start witnessing positive returns within 6-12 months post-deployment, with continued benefits over time."
-                        },
-                        {
-                            title: "How does Sapphire NW ensure the privacy and security of user data within the apps developed?",
-                            description: "Adhering to strict data security standards and complying with all relevant privacy laws, Sapphire NW ensures robust security features are baked into every app we develop. We respect user data privacy and utilize it strictly for agreed-upon purposes. Your users' privacy and data security are our foremost priorities."
-                        },
-                    ]} initTopic="Custom App Develpment" />
                 </footer>
             </div>
         </div>

@@ -12,6 +12,7 @@ type ServiceLargeItemProps = {
     learnMoreHref?: string
     divClass?: string
     imgClass?: string
+    content?: JSX.Element
 }
 
 const ServiceLargeItem = ({ props }: { props: ServiceLargeItemProps }) => {
@@ -39,6 +40,7 @@ const ServiceLargeItem = ({ props }: { props: ServiceLargeItemProps }) => {
                     {isNew ? <p className="text-white bg-acc px-2 py-[2px] rounded-md text-sm font-bold">New</p> : <></>}
                 </div>
                 <p data-aos="fade-up" data-aos-delay="100" className="text-gray-500 md:text-left text-center">{description}</p>
+                {props.content ?? <></>}
                 {learnMoreHref == undefined ? <></> : <div className="w-fit"><Link href={learnMoreHref}><p className="text-gray-400 hover:text-acc transition-colors">Learn More &rarr;</p></Link></div>}
             </div>
             <div className={`${reverse ? "md:pr-16" : "md:pl-16"} grid place-items-center overflow-x-hidden`}>

@@ -1,7 +1,7 @@
 import { Input, Loading, createTheme } from "@nextui-org/react";
 import { useState } from "react";
 
-export default function Form({ initTopic }: { initTopic?: string }) {
+export default function Form({ initTopic, title }: { initTopic?: string, title?: string }) {
     const [topic, setTopic] = useState(initTopic ?? "")
     const [name, setName] = useState("")
     const [company, setCompany] = useState("")
@@ -116,7 +116,7 @@ export default function Form({ initTopic }: { initTopic?: string }) {
         }
     })}>
         <div className="p-8 rounded-md bg-dk-500 w-fit space-y-8 lg:max-w-2xl text-lt">
-            <h4 className="text-2xl md:text-4xl font-bold">Request More Information</h4>
+            <h4 className="text-2xl md:text-4xl font-bold">{title ?? "Request More Information"}</h4>
             <p>Would you like to speak to us about our services? Just submit your details and we’ll be in touch shortly. You can also email us directly if you would prefer – <span className="font-bold">success@sapphirenw.com</span></p>
             <div className="">
                 <Input
