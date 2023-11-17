@@ -52,7 +52,7 @@ export default function About() {
                     <Header />
                     <SafeArea>
                         <div data-aos="fade-up" className="px-4 min-h-[70vh] md:min-h-[80vh] space-y-8 text-lt mt-8 md:mt-16">
-                            <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>Your Local Develpoment Firm</h1>
+                            <h1 className='text-5xl md:text-7xl font-bold text-center max-w-3xl mx-auto'>Your Local Development Firm</h1>
                             <p className='text-xl md:text-2xl text-center max-w-3xl mx-auto'>Located in the Pacific Northwest, Sapphire NW focuses on creating genuine, tong-tenured relationships with our clients.</p>
                             <div className="grid place-items-center">
                                 <a href={"/contact"}>
@@ -65,7 +65,7 @@ export default function About() {
                         <div className="max-w-[1000px] mx-auto px-4 md:px-8">
                             <div className="space-y-16">
                                 <h2 className='text-4xl md:text-5xl font-bold'>Meet Your Team Leads</h2>
-                                {cell("/images/kevin.png", "Kevin", "Kevin is our web development and app architecture specialist. He oversees most projects that Sapphire NW takes on, and takes an active role in shaping the product or service to be the best it can possibly be. He also takes on develpoment tasks when a web application is needed for a client, leveraging his 20+ years in the web development industry, and his extensive knowledge of the AWS Cloud platform.")}
+                                {cell("/images/kevin.png", "Kevin", "Kevin is a Technology Leader with over 20 years of experience defining, designing, and building enterprise-level solutions using lean and agile project management processes to ensure the right product is delivered on time and on budget. He will meet with you to review your current technology stack, pain points, and project goals, and discuss options to meet those goals within your budget. Kevin is passionate about developing innovative products and solutions leveraging AWS cloud, Salesforce, and other web and app development frameworks that solve real-world problems for clients. With his deep technical expertise, methodical approach, and commitment to delivering business value, Kevin is dedicated to collaborating with clients to transform their vision into reality.")}
                                 {cell("/images/jake.png", "Jake", "Jake is a recent college graduate and main developer of AI technologies at Sapphire NW. He has spent signifigant amounts of time researching and developing AI systems and AI powered applications since 2020. He also takes on mobile development for the company, creating polished user interfaces that clients love to interact with.")}
                             </div>
                         </div>
